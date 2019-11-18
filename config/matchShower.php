@@ -13,16 +13,12 @@ public function caller(){
      $addNewMenu=$db->getConnection();
 
 
-     $query_insert = "SELECT * FROM matches";
-     $res_insert= $addNewMenu->query($query_insert);
 
-     if ($res_insert == false){
-         echo 'PROBLEM';
-     }else{
-         ECHO 'DONE';}
+     $queryMenuList=$addNewMenu($query="SELECT * FROM `matches` ");
 
-}
+     while ($fetch_menu=mysqli_fetch_assoc($queryMenuList)) {
 
-
+       print_r($fetch_menu);
+    }
 
 }
