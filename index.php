@@ -1,23 +1,13 @@
 <?php
 
-require 'config/database.class.php';
+require 'config/matchShower.php';
 
 
 echo 'hi';
 
 
-public function caller(){
 
-     $db=Database::getInstance();
-     $addNewMenu=$db->getConnection();
+$test= new matchShower();
 
 
-     $query_insert = "SELECT * FROM matches";
-     $res_insert= $addNewMenu->query($query_insert);
-
-     if ($res_insert == false){
-         echo 'PROBLEM';
-     }else{
-         ECHO 'DONE';}
-
- }
+$test->caller();
