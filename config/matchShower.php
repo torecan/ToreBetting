@@ -14,7 +14,7 @@ public function caller(){
 
 
 
-     $queryMenuList=$addNewMenu($query="SELECT * FROM `matches` ");
+     $queryMenuList=$addNewMenu->query("SELECT * FROM `matches` ");
 
      while ($fetch_menu=mysqli_fetch_assoc($queryMenuList)) {
 
